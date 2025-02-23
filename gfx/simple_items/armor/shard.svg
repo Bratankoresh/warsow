@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   id="svg4157"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="shard.svg"
+   inkscape:export-filename="D:\downloads\icons\armor\shard.png"
+   inkscape:export-xdpi="180"
+   inkscape:export-ydpi="180">
+  <defs
+     id="defs4159">
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter4175">
+      <feGaussianBlur
+         stdDeviation="1 1"
+         result="blur"
+         id="feGaussianBlur4177" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Blur"
+       id="filter4179">
+      <feGaussianBlur
+         stdDeviation="1 1"
+         result="blur"
+         id="feGaussianBlur4181" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#7ebda3"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.6568542"
+     inkscape:cx="90.216202"
+     inkscape:cy="83.09868"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     units="px"
+     inkscape:window-width="1600"
+     inkscape:window-height="843"
+     inkscape:window-x="-9"
+     inkscape:window-y="23"
+     inkscape:window-maximized="1"
+     inkscape:object-nodes="true"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="false"
+     inkscape:snap-bbox="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-global="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3336"
+       empspacing="4"
+       dotted="false"
+       color="#ffffff"
+       opacity="1"
+       empcolor="#0000e6"
+       empopacity="0.25098039" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata4162">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-924.36216)">
+    <path
+       style="opacity:0.25;fill:#29df99;fill-opacity:1;stroke:none"
+       d="m 32,948.36216 0,44 c 0,14.66844 12,36.00004 32.04687,36.00004 C 84,1028.3622 96,1007.0306 96,992.36216 l 0,-44 z"
+       id="rect2996-0-1-8-1-6-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cssscc" />
+    <path
+       style="opacity:0.25;fill:#000000;fill-opacity:1;stroke:none"
+       d="m 32,948.36216 0,44 c 0,14.66844 12,36.00004 32.046872,36.00004 C 84,1028.3622 96,1007.0306 96,992.36216 l 0,-44 z"
+       id="rect2996-0-1-8-1-6-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cssscc" />
+    <path
+       style="fill:#29df99;fill-opacity:1;stroke:none"
+       d="m 24,940.36216 0,54 c 0,17.33534 16,42.00004 40.058594,42.00004 C 88,1036.3622 104,1011.6975 104,994.36216 l 0,-54 z m 72,8 0,44 C 96,1007.0306 84,1028.3622 64.046875,1028.3622 44,1028.3622 32,1007.0306 32,992.36216 l 0,-44 z"
+       id="rect2996-0-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cssscccssscc" />
+    <path
+       inkscape:connector-curvature="0"
+       style="opacity:0.15;fill:#000000;fill-opacity:1;stroke:none"
+       d="m 62,984.36212 0,12.00008 -12,0 0,8 12,0 0,12 8,0 0,-12 12,0 0,-8 -12,0 0,-12.00008 z"
+       id="rect4187-0-5-6-6-0-0"
+       sodipodi:nodetypes="ccccccccccccc" />
+    <path
+       style="fill:#29df99;fill-opacity:1;stroke:none"
+       d="m 60,980.36216 0,12 -12,0 0,8.00004 12,0 0,12 8,0 0,-12 12,0 0,-8.00004 -12,0 0,-12 z"
+       id="rect4187-0-5-6-6-0"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccccccc" />
+  </g>
+</svg>

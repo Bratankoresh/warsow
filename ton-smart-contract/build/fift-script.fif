@@ -1,0 +1,7 @@
+"Asm.fif" include
+
+// Загрузка кода контракта
+"build/contract.fif" include
+
+// Создание TVC файла
+boc>file "build/contract.tvc"

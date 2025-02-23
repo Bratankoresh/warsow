@@ -1,0 +1,2 @@
+all the v_weaponname_hand.max files are animations for 1st person view weapons.
+These files consist of an animated null object wich is "father" of the tag_weapon (it's the only animated object, actual weapon model is parented to this tag by the game code). If you need to modify a weapon animation, just edit the null objects keys and export only the tag_weapon as "v_weaponname_hand.md3".

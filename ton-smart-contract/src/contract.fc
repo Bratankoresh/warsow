@@ -1,0 +1,107 @@
+#include "ton/stdlib.fc";
+
+int get_user_balance(slice address) inline {
+    ;; Получение баланса из хранилища
+    slice ds = get_data().begin_parse(); ;; Получаем данные контракта
+    while (ds.slice_empty?() == 0) { ;; Проверяем, что срез не пуст
+        slice stored_address = ds~load_msg_addr();
+        int stored_balance = ds~load_uint(64);
+        if (address.slice_bits() == stored_address.slice_bits()) {
+            if (address.slice_refs() == stored_address.slice_refs()) {
+                return stored_balance;
+            }
+        }
+    }
+    return 0; ;; Если адрес не найден, возвращаем 0
+}
+
+() set_user_balance(slice address, int new_balance) inline {
+    ;; Сохранение нового баланса
+    var old_data = get_data().begin_parse();
+    builder b = begin_cell();
+    int found = 0; ;; Используем int вместо bool
+    while (old_data.slice_empty?() == 0) { ;; Проверяем, что срез не пуст
+        slice stored_address = old_data~load_msg_addr();
+        int stored_balance = old_data~load_uint(64);
+        if (address.slice_bits() == stored_address.slice_bits()) {
+            if (address.slice_refs() == stored_address.slice_refs()) {
+                ;; Обновляем баланс для данного адреса
+                b.store_slice(stored_address).store_uint(new_balance, 64);
+                found = 1; ;; Устанавливаем found в 1 (true)
+            } else {
+                ;; Оставляем старые данные без изменений
+                b.store_slice(stored_address).store_uint(stored_balance, 64);
+            }
+        } else {
+            ;; Оставляем старые данные без изменений
+            b.store_slice(stored_address).store_uint(stored_balance, 64);
+        }
+    }
+    if (found == 0) { ;; Проверяем, что found == 0 (false)
+        ;; Если адрес не найден, добавляем новую запись
+        b.store_slice(address).store_uint(new_balance, 64);
+    }
+    set_data(b.end_cell());
+}
+
+() recv_internal(int msg_value, cell in_msg, slice in_msg_body) impure {
+    ;; Проверка минимального значения входящего сообщения
+    if (msg_value < 10000000) { ;; 10000000 nanoton == 0.01 TON
+        return ();
+    }
+
+    ;; Парсинг входящего сообщения
+    slice cs = in_msg.begin_parse();
+    int flags = cs~load_uint(4); ;; Загружаем флаги
+    slice sender_address = cs~load_msg_addr(); ;; Загружаем адрес отправителя
+    int op = in_msg_body~load_uint(32); ;; Загружаем код операции
+
+    if (op == 1) { ;; Перевод токенов
+        slice recipient_address = in_msg_body~load_msg_addr(); ;; Адрес получателя
+        int amount = in_msg_body~load_coins(); ;; Сумма перевода
+
+        ;; Логика перевода
+        var sender_balance = get_user_balance(sender_address);
+
+        ;; Получаем баланс контракта
+        var balance_data = get_balance(); ;; Получаем кортеж [int, cell]
+
+        ;; Инициализация переменных
+        int contract_balance = 0; ;; Инициализируем временным значением
+        cell extra_data = begin_cell().end_cell(); ;; Инициализируем пустой ячейкой
+
+        ;; Распаковываем кортеж
+        (contract_balance, extra_data) = unpair(balance_data);
+
+        if (sender_balance >= amount) {
+            ;; Уменьшаем баланс отправителя
+            set_user_balance(sender_address, sender_balance - amount);
+
+            ;; Увеличиваем баланс получателя
+            var recipient_balance = get_user_balance(recipient_address);
+            set_user_balance(recipient_address, recipient_balance + amount);
+
+            ;; Увеличиваем баланс контракта
+            set_data(begin_cell().store_uint(contract_balance + amount, 64).end_cell()); ;; Устанавливаем новый баланс контракта
+        }
+    } else {
+        ;; Проверяем, является ли операция инициализацией баланса
+        if (op == 2) { ;; Инициализация баланса
+            slice address = in_msg_body~load_msg_addr();
+            int initial_balance = in_msg_body~load_uint(64);
+            set_user_balance(address, initial_balance);
+        }
+    }
+
+    ;; Отправка ответного сообщения
+    slice msg_text = "Operation completed successfully";
+    cell msg = begin_cell()
+        .store_uint(0x18, 6) ;; Тип сообщения
+        .store_slice(sender_address) ;; Адрес отправителя
+        .store_coins(100) ;; Возвращаемая сумма (например, 100 nanoton)
+        .store_uint(0, 1 + 4 + 4 + 64 + 32 + 1 + 1) ;; Зарезервированные биты
+        .store_uint(0, 32) ;; Зарезервированные биты
+        .store_slice(msg_text) ;; Текст сообщения
+    .end_cell();
+    send_raw_message(msg, 64); ;; Отправляем сообщение
+}

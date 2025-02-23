@@ -1,0 +1,17 @@
+{
+    "ABI version": 2,
+    "header": ["pubkey", "time", "expire"],
+    "functions": [
+      {
+        "name": "recv_internal",
+        "inputs": [
+          {"name": "msg_value", "type": "int"},
+          {"name": "in_msg", "type": "cell"},
+          {"name": "msg_body", "type": "slice"}
+        ],
+        "outputs": []
+      }
+    ],
+    "data": [],
+    "events": []
+  }

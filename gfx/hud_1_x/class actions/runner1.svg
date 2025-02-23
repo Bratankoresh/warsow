@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   id="svg4157"
+   viewBox="0 0 128 128"
+   height="128"
+   width="128">
+  <defs
+     id="defs4159">
+    <filter
+       id="filter4175"
+       style="color-interpolation-filters:sRGB;">
+      <feGaussianBlur
+         id="feGaussianBlur4177"
+         result="blur"
+         stdDeviation="1 1" />
+    </filter>
+    <filter
+       id="filter4179"
+       style="color-interpolation-filters:sRGB;">
+      <feGaussianBlur
+         id="feGaussianBlur4181"
+         result="blur"
+         stdDeviation="1 1" />
+    </filter>
+  </defs>
+  <metadata
+     id="metadata4162">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,-924.36216)"
+     id="layer1">
+    <ellipse
+       ry="56.000023"
+       rx="56"
+       cy="988.36218"
+       cx="64"
+       id="path4591-5-0-4-5-4-2"
+       style="opacity:0.25;fill:#11e346;fill-opacity:1;stroke:none" />
+    <ellipse
+       ry="56.000023"
+       rx="56"
+       cy="988.36218"
+       cx="64"
+       id="path4591-5-0-4-5-4-7-7"
+       style="opacity:0.25;fill:#000000;fill-opacity:1;stroke:none" />
+    <path
+       id="path4591-5-0-4-5-4"
+       d="m 63.999999,928.36216 c -33.137086,0 -60.0000012,26.86291 -59.999999,59.99999 -3.53e-5,33.13715 26.86289,60.00005 59.999999,60.00005 33.13711,0 60.000041,-26.8629 60.000001,-60.00005 0,-33.13708 -26.862914,-59.99999 -60.000001,-59.99999 z m 10e-7,8 c 28.403216,0 52,23.59679 52,52 0,28.40324 -23.596788,52.00004 -52,52.00004 -28.403212,0 -51.999995,-23.5968 -52,-52.00004 -10e-7,-28.40321 23.596784,-52 52,-52 z"
+       style="opacity:1;fill:#11e346;fill-opacity:1;stroke:none" />
+    <path
+       id="path4153-0"
+       d="m 66,962.36216 c -19.05318,0.0241 -35.653082,12.03501 -42,30 2.568958,7.26083 6.813281,13.54974 12.216797,18.46874 L 48.958984,998.08869 A 18,18 0 0 1 48,992.36216 a 18,18 0 0 1 18,-18 18,18 0 0 1 5.730469,0.95508 L 81.775391,965.27232 C 76.849364,963.39193 71.529618,962.3683 66,962.36216 Z M 95.783203,973.89341 83.041016,986.6356 A 18,18 0 0 1 84,992.36216 a 18,18 0 0 1 -18,18.00004 18,18 0 0 1 -5.730469,-0.9551 l -10.044922,10.0449 c 4.926027,1.8804 10.245773,2.904 15.775391,2.9102 19.053184,-0.024 35.65309,-12.035 42,-30.00004 -2.56896,-7.26081 -6.81328,-13.54969 -12.216797,-18.46875 z"
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;opacity:0.15" />
+    <path
+       id="rect4232-9"
+       d="m -696.04916,744.13242 82.02439,0 0,8.48528 -82.02439,0 z"
+       style="opacity:0.15;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,0,0)" />
+    <path
+       id="path4153"
+       transform="translate(0,924.36216)"
+       d="M 64 34 C 44.94682 34.024063 28.346918 46.035009 22 64 C 24.568958 71.26081 28.813281 77.549694 34.216797 82.46875 L 46.958984 69.726562 A 18 18 0 0 1 46 64 A 18 18 0 0 1 64 46 A 18 18 0 0 1 69.730469 46.955078 L 79.775391 36.910156 C 74.849364 35.029773 69.529618 34.006134 64 34 z M 93.783203 45.53125 L 81.041016 58.273438 A 18 18 0 0 1 82 64 A 18 18 0 0 1 64 82 A 18 18 0 0 1 58.269531 81.044922 L 48.224609 91.089844 C 53.150636 92.970227 58.470382 93.993867 64 94 C 83.053184 93.975945 99.653087 81.964996 106 64 C 103.43104 56.739191 99.186719 50.450305 93.783203 45.53125 z "
+       style="fill:#11e346;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       id="rect4232"
+       d="m -694.63495,739.88978 82.02439,0 0,8.48528 -82.02439,0 z"
+       style="fill:#11e346;fill-opacity:1;stroke:none"
+       transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,0,0)" />
+  </g>
+</svg>
